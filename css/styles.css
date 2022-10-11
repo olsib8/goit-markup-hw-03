@@ -10,6 +10,8 @@
   --fourth-text-color: rgba(255, 255, 255, 0.6);
   --fifth-text-color: #000000;
   --primary-accent-color: #2196f3;
+  --primary-border-color: #ececec;
+  --secondaty-border-color: #eeeeee;
 }
 body {
   background-color: var(--primary-background-color);
@@ -17,6 +19,7 @@ body {
   font-family: roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
+  width: 1600px;
 }
 .list {
   list-style: none;
@@ -36,8 +39,64 @@ body {
   clip: rect(0px, 0px, 0px, 0px);
   overflow: hidden;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+button {
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+address {
+  font-style: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 /* Хедер */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 344px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.header-line {
+  border-bottom: 1px solid var(--primary-border-color);
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 93px;
+}
+.header-list {
+  display: flex;
+  gap: 50px;
+}
 
 .logo {
   font-family: raleway, sans-serif;
@@ -77,6 +136,10 @@ body {
 .hero {
   background-color: var(--secondary-background-color);
 }
+.hero-area {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 .hero-title {
   color: var(--third-text-color);
   font-weight: 900;
@@ -85,19 +148,25 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
+  width: 696px;
+  margin: 0 auto 30px;
 }
 .hero-button {
   color: var(--third-text-color);
   background-color: var(--primary-accent-color);
-  cursor: pointer;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
+  display: block;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 216px;
+  height: 50px;
+  margin: 0 auto;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -108,27 +177,57 @@ body {
 .features-title {
   line-height: 1.14;
   text-transform: uppercase;
+  max-width: 270px;
+  margin-bottom: 10px;
+}
+.features-list {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 118px;
+  justify-content: center;
+  gap: 30px;
 }
 .features-text {
   line-height: 1.71;
   color: var(--secondary-text-color);
+  max-width: 270px;
 }
 .headline {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
+}
+.headline-list {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 94px;
 }
 .box {
   background-color: var(--third-background-color);
 }
+.box-list {
+  display: flex;
+  gap: 30px;
+}
+.box-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .box-pic {
   background-color: var(--primary-background-color);
+  padding-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .box-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .box-text {
   font-size: 16px;
@@ -139,6 +238,10 @@ body {
 
 /* Мейн портфоліо */
 
+.items-container {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
 .items-btn {
   color: var(--primary-text-color);
   background-color: var(--third-background-color);
@@ -150,11 +253,38 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  padding: 6px 22px;
+}
+.items-size {
+  padding-bottom: 94px;
+}
+.size-btn {
+  padding: 6px 25px;
 }
 .items-btn:hover,
 .items-btn:focus {
   color: var(--third-text-color);
   background-color: var(--primary-accent-color);
+}
+.container-btn {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 50px;
+}
+.list-gallery {
+  width: calc((100% - 60px) / 3);
+}
+.items-border {
+  border-left: 1px solid var(--secondaty-border-color);
+  border-right: 1px solid var(--secondaty-border-color);
+  border-bottom: 1px solid var(--secondaty-border-color);
+  padding: 20px 24px;
 }
 .items-title {
   font-size: 18px;
@@ -166,6 +296,7 @@ body {
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-text-color);
+  margin-top: 4px;
 }
 
 /* Футер */
@@ -173,8 +304,19 @@ body {
 .footer {
   background-color: var(--secondary-background-color);
 }
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .logo-footer-color {
   color: var(--third-text-color);
+}
+.list-distance {
+  margin-top: 20px;
+}
+.link-distance {
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
 .footer-adress {
   color: var(--third-text-color);
