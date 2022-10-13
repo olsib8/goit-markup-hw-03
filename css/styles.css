@@ -19,13 +19,51 @@ body {
   font-family: roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
-  width: 1600px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+}
+button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 15px;
 }
 .list {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 .text {
   text-decoration: none;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
 }
 .visually-hidden {
   position: absolute;
@@ -39,54 +77,17 @@ body {
   clip: rect(0px, 0px, 0px, 0px);
   overflow: hidden;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-ul,
-ol {
-  margin: 0;
-  padding-left: 0;
-}
-button {
-  cursor: pointer;
-  border: 1px solid transparent;
-}
-address {
-  font-style: normal;
-}
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
 /* Хедер */
 
 .header-container {
   display: flex;
   align-items: center;
-  gap: 344px;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 .header-line {
   border-bottom: 1px solid var(--primary-border-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .header-nav {
   display: flex;
@@ -96,6 +97,7 @@ img {
 .header-list {
   display: flex;
   gap: 50px;
+  margin-left: auto;
 }
 
 .logo {
@@ -135,10 +137,7 @@ img {
 
 .hero {
   background-color: var(--secondary-background-color);
-}
-.hero-area {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 200px 0;
 }
 .hero-title {
   color: var(--third-text-color);
@@ -158,14 +157,11 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: block;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  border-radius: 4px;
   padding: 10px 32px;
   min-width: 216px;
-  height: 50px;
   margin: 0 auto;
 }
 .hero-button:hover,
@@ -174,17 +170,20 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+.features {
+  padding-top: 94px;
+  padding-bottom: 118px;
+}
 .features-title {
   line-height: 1.14;
   text-transform: uppercase;
   max-width: 270px;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 .features-list {
   display: flex;
-  padding-top: 94px;
-  padding-bottom: 118px;
-  justify-content: center;
+
   gap: 30px;
 }
 .features-text {
@@ -198,35 +197,38 @@ img {
   text-align: center;
   margin-bottom: 50px;
 }
+.headline-area {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
 .headline-list {
   display: flex;
   gap: 30px;
-  padding-bottom: 94px;
 }
 .box {
   background-color: var(--third-background-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .box-list {
   display: flex;
   gap: 30px;
 }
-.box-container {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .box-pic {
   background-color: var(--primary-background-color);
-  padding-bottom: 30px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.box-area {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .box-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 .box-text {
@@ -238,9 +240,9 @@ img {
 
 /* Мейн портфоліо */
 
-.items-container {
+.items {
   padding-top: 94px;
-  padding-bottom: 50px;
+  padding-bottom: 94px;
 }
 .items-btn {
   color: var(--primary-text-color);
@@ -255,9 +257,6 @@ img {
   letter-spacing: 0.03em;
   padding: 6px 22px;
 }
-.items-size {
-  padding-bottom: 94px;
-}
 .size-btn {
   padding: 6px 25px;
 }
@@ -270,6 +269,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 8px;
+  margin-bottom: 50px;
 }
 .list-container {
   display: flex;
@@ -314,9 +314,11 @@ img {
 .list-distance {
   margin-top: 20px;
 }
-.link-distance {
-  margin-top: 9px;
+.footer-distance {
   margin-bottom: 9px;
+}
+.footer-distance:last-child {
+  margin-bottom: 0;
 }
 .footer-adress {
   color: var(--third-text-color);
